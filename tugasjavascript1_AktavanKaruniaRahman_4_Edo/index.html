@@ -1,0 +1,43 @@
+<script language="javascript">
+    ///////
+    var pegawai = "Ridwan";
+    var jabatan = "manager";
+    var status = "menikah";
+    // TV => 3 jt, Kulkas => 4 jt, AC => 5 jt
+    //struktur kendali
+    if(jabatan == 'manager'){
+        gaji_pokok = 15000000; 
+    } 
+    else if(jabatan == 'asisten manager'){
+        gaji_pokok = 10000000; 
+    } 
+    else if(staff == 'AC'){
+        gaji_pokok = 5000000; 
+    }
+    else{
+        gaji_pokok = 0; 
+    } 
+    let tunjangan = 15/100 * gaji_pokok;
+    let BPJS = 10/100 * gaji_pokok;
+    let total_elemen = gaji_pokok + tunjangan + BPJS;
+    
+document.write(
+    <table align="center" border="1" cellpadding="10" cellspacing="0"
+		       width="40%">
+			<thead>
+				<tr bgcolor="AQUA">
+					<th><b>NAMA PEGAWAI</b></th>
+					<th><b>JABATAN</b></th>
+					<th><b>STATUS</b></th>
+					<th colspan="2"><b>GAJI</b></th>
+				</tr>
+			</thead>
+			<tbody align="center">
+				<tr>
+					<td rowspan="4">${pegawai}</td>
+					<td rowspan="4">${jabatan}</td>
+                    <td rowspan="4">${status}</td>
+					<td>Gaji Pokok</td>
+                    <td>${Gaji Pokok}</td>
+				</tr>
+</script>
