@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h3 align="center">Pegawai PT. Nusa Indah</h3>
+    <table align="center" cellpadding="10%">
+        <thead>
+        <tr bgcolor="aqua">
+            <th>No.</th>
+            <th>Nama</th>
+            <th>Agama</th>
+            <th>Jabatan</th>
+            <th>Gaji Pokok</th>
+            <th>Tunjangan Jabatan</th>
+            <th>Tunjangan Kesehatan</th>
+            <th>Gaji Kotor</th>
+            <th>Zakat Profesi</th>
+            <th>Take Home Pay</th>
+        </tr>
+        </thead>
+        <tbody align="center">
+            <script language="javascript">
+                let no = 100;
+                let jabatan;
+                let zakat;
+                // penggunaan if else untuk penempatan nominan gaji
+                for (no = 1; no <= 100; no++){
+                    if(no <= 25) {
+                        jabatan = "Manager";
+                    } else if (no <= 50){
+                        jabatan = "Asisten Manager";
+                    } else if (no <= 75){
+                        jabatan = "Supervisor";
+                    } else if (no <= 100){
+                        jabatan = "Staff";
+                    } else {
+                        jabatan = "";
+                    }
+                    //menggunakan swithcase untuk jabatan
+                    let gapok;
+                    switch(jabatan){
+                        case "Manager" : gapok = 15000000; break;
+                        case "Asisten Manager" : gapok = 10000000; break;
+                        case "Supervisor" : gapok = 7000000; break;
+                        case "Staff" : gapok = 4000000; break;
+                        default : gapok = 0;
+                    }
+
+                    let agama = (no % 2 == 0) ? "Non Muslim" : "Muslim"; 
+                    let warna = (no % 2 == 0) ? "blue" : "yellow";
+                    let tunjanganJabatan = 0.2 * gapok;
+                    let tunjanganKesehatan = 0.1 * gapok;
+                    let gajiKotor = gapok + tunjanganJabatan + tunjanganKesehatan;
+                    
+                    
+                    if (agama == "Muslim" && gajiKotor >= 7000000){
+                        zakat = 0.025 * gajiKotor;
+                    } else {
+                        zakat = 0;
+                    }
+
+                    let takeHomePay = gajiKotor - zakat;
+                    
+                    document.write(
+                        `<tr bgcolor = ${warna}>
+                            <td>${no}</td>
+                            <td>Pegawai${no}</td>
+                            <td>${agama}</td>
+                            <td>${jabatan}</td>
+                            <td>${gapok}</td>
+                            <td>${tunjanganJabatan}</td>
+                            <td>${tunjanganKesehatan}</td>
+                            <td>${gajiKotor}</td>
+                            <td>${zakat}</td>
+                            <td>${takeHomePay}</td>
+                        </tr>`
+                    );
+                }
+            </script>
+        </tbody>
+    </table>
+</body>
+</html>
