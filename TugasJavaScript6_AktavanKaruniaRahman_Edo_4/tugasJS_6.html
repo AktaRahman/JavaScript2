@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head><title>Tugas JS 6 Aktavan Karunia Rahman</title>
+        <script>
+            class Gempa{
+                constructor(lokasi, skala, dampak){
+                    this.lokasi = lokasi;
+                    this.skala = skala;
+                    this.dampak = dampak;
+                }
+                getDampak(){
+                    if(this.skala >= 0 && this.skala <= 2) this.dampak = 'Tidak Terasa';
+                    else if(this.skala >= 2 && this.skala <= 4) this.dampak = 'Bangunan Retak-retak';
+                    else if(this.skala > 4 && this.skala <= 6) this.dampak = 'Bangunan Roboh';
+                    else if(this.skala > 6 && this.skala <= 10) this.dampak = 'Berpotensi Tsunami';
+                    else this.dampak = '';
+            
+                    return this.dampak;
+                }
+                infogempa(){
+                    document.write(`Lokasi Gempa:  ${this.lokasi}
+                   <br/>Skala Gempa: ${this.skala}
+                    <br/>Dampak Gempa: ${this.dampak}
+                    <br/>Dampak Gempa: ${this.getDampak()}
+                    <hr/>`);
+                }
+            }
+            
+            //-------membuat object-----
+            g1 = new Gempa('Lombok',7,'Berpotensi Tsunami');
+            g2 = new Gempa('Aceh',8,'Berpotensi Tsunami');
+            g3 = new Gempa('jogja',6,'Bangunan Roboh');
+            g4 = new Gempa('Lombok',7,'Berpotensi Tsunami');
+            g5 = new Gempa('Aceh',8,'Berpotensi Tsunami');
+            g6 = new Gempa('jogja',6,'Bangunan Roboh');
+            g7 = new Gempa('Lombok',7,'Berpotensi Tsunami');
+            g8 = new Gempa('Aceh',8,'Berpotensi Tsunami');
+            g9 = new Gempa('jogja',6,'Bangunan Roboh');
+            g10 = new Gempa('jogja',6,'Bangunan Roboh');
+
+            s1.mencetak(); s2.mencetak(); s3.mencetak(); s4.mencetak(); s5.mencetak(); s6.mencetak(); s7.mencetak(); s8.mencetak(); s9.mencetak();
+            s10.mencetak(); 
+        </script>
+    
