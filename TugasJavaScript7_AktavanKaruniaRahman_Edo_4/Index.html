@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Suara Hewan</title>
+    <script type="text/javascript" src="jquery-3.6.1.js"></script>
+    <script type="text/javascript">
+            $(document).ready(function(){
+                $(".ayam").click(function () {
+                $("<audio></audio>").attr({
+                    'src': 'audio/ayam.mp3',
+                    'volume': 0.5,
+                    'autoplay': 'autoplay'
+                }).appendTo("class");
+                });
+            });
+            $(document).ready(function(){
+            $(".gajah").click(function () {
+                $("<audio></audio>").attr({
+                    'src': 'audio/gajah.mp3',
+                    'volume': 0.4,
+                    'autoplay': 'autoplay'
+                }).appendTo("body");
+                });
+            });
+            $(document).ready(function(){
+            $(".harimau").click(function () {
+                $("<audio></audio>").attr({
+                    'src': 'audio/harimau.mp3',
+                    'volume': 0.4,
+                    'autoplay': 'autoplay'
+                }).appendTo("body");
+                });
+            });
+            $(document).ready(function(){
+            $(".burung").click(function () {
+                $("<audio></audio>").attr({
+                    'src': 'audio/burung.mp3',
+                    'volume': 0.4,
+                    'autoplay': 'autoplay'
+                }).appendTo("body");
+                });
+            });
+            $(document).ready(function(){
+            $(".sapi").click(function () {
+                $("<audio></audio>").attr({
+                    'src': 'audio/sapi.mp3',
+                    'volume': 0.4,
+                    'autoplay': 'autoplay'
+                }).appendTo("body");
+                });
+            });   
+    </script>
+</head>
+<body>
+    <h3 align="center">SUARA SUARA HEWAN</h3>
+            <table align="center" border="0" cellpadding="10" cellspacing="0"
+                width="60%">
+                <thead>
+                    <tr bgcolor="aqua">
+                        <th>Jenis Hewan</th>
+                        <th>Gambar</th>
+                        <th>Suara</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>AYAM</td>
+                        <td><img src="images/ayam.jpeg" width="50%"></td>
+                        <td><button class="ayam">ayam</button></td>
+                    </tr>
+                    <tr>
+                        <td>GAJAH</td>
+                        <td><img src="images/gajah.jpg" width="50%"></td>
+                        <td><button class="gajah">gajah</button></td>
+                    </tr>
+                    <tr>
+                        <td>HARIMAU</td>
+                        <td><img src="images/harimau.jpg" width="50%"></td>
+                        <td><button class="harimau">harimau</button></td>
+                    </tr>
+                    <tr>
+                        <td>BURUNG</td>
+                        <td><img src="images/burung.jpg" width="50%"></td>
+                        <td><button class="burung">burung</button></td>
+                    </tr>
+                    <tr>
+                        <td>SAPI</td>
+                        <td><img src="images/sapi.jpg" width="50%"></td>
+                        <td><button class="sapi">sapi</button></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr bgcolor="grey">
+                        <th colspan="3">Copyright 2022 - Aktavan Karunia Rahman (Akta Rahman). All right reserved</th>
+                    </tr>
+                </tfoot>
+            </table>
+	</body>
+</html>
